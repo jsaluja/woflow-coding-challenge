@@ -1,4 +1,4 @@
-# woflow-coding-challenge-questions
+# Questions
 
 1. **What is the total number of unique node IDs?**
 
@@ -21,3 +21,8 @@
     
     Space - O(N) - BFS queue, DFS stack
     Time - O(N) - Visit all nodes at least once
+
+# Known limitations
+
+    Network call for each new node contributes to latency. 
+    If there is another way to fetch child nodes without this network call, latency can be improved
