@@ -19,7 +19,7 @@
     
 # Complexity
     
-    Space - O(N) - BFS queue, DFS stack
+    Space - O(N) - BFS or DFS - both will require same space
     Time - O(N) - Visit all nodes at least once
 
 # Known limitations
