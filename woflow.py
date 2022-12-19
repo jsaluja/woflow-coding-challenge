@@ -44,5 +44,5 @@ if __name__ == '__main__':
         'https://nodes-on-nodes-challenge.herokuapp.com/nodes/'
     )
 
-    print(f'Most common node: {common}')
     print(f'Number of unique nodes: {unique}')
+    print(f'Most common node: {common}')
