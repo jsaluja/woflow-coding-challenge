@@ -16,7 +16,7 @@ def bfs(start: str, endpoint: str) -> tuple[str, int]:
     seen.add(start)
 
     while len(queue) != 0:
-
+        # bfs - invoke the endpoint from frontier while q has nodes
         node = queue.popleft()
 
         # construct url
@@ -26,13 +26,13 @@ def bfs(start: str, endpoint: str) -> tuple[str, int]:
         children = requests.get(url).json()[0]["child_node_ids"]
 
         for child in children:
-
             if child not in seen:
+                # append new child to frontier, start freq counter at 1
                 queue.append(child)
                 frequency[child] = 1
                 seen.add(child)
-
             else:
+                # increment freq counter for existing child
                 frequency[child] += 1
 
     return max(frequency, key=frequency.get), len(seen)
